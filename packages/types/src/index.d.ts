@@ -104,6 +104,9 @@ export type VerifiableCredentialRecord = {
 };
 
 export type Stamp = {
+  // recordUserName: string;
+  // credentialIssuer: string;
+  streamId?: string; // Must not be undefined for stamps loaded from ceramic
   provider: PROVIDER_ID;
   credential: VerifiableCredential;
   verified?: boolean;
@@ -119,4 +122,14 @@ export type Passport = {
 export type DID = string;
 
 // Currently set-up Providers
-export type PROVIDER_ID = "Google" | "Ens" | "Poh" | "Twitter" | "POAP" | "Facebook" | "Brightid" | "Github";
+export type PROVIDER_ID =
+  | "Google"
+  | "Ens"
+  | "Poh"
+  | "Twitter"
+  | "POAP"
+  | "Facebook"
+  | "Brightid"
+  | "Github"
+  | "Linkedin"
+  | "Discord";
